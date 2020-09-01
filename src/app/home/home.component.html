@@ -1,0 +1,13 @@
+<div style="padding: 13px;">
+    <ul>
+        <li *ngFor="let product of products">
+            <div style="background: blue;">
+                <span>{{product.id}}</span>{{product.tresc}} {{product.created_by.firstname}}
+            </div>
+            {{product.obrazek[0].url}}
+            <img src="https://vast-reaches-72056.herokuapp.com{{product.obrazek[0].url}}" width="product.obrazek[0].width" height="product.obrazek[0].height" alt="NIE MA OBRAZKA :_(" />
+            <img [src]="product.obrazek[0].url" />
+
+        </li>
+    </ul>
+</div>
